@@ -1,9 +1,13 @@
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Home = () => {
   return (
     <div className="flex min-h-screen justify-center items-center">
-      <Button>Click me</Button>
+      Click &nbsp;
+      <Link href="/documents/123">
+        <span className="underline text-blue-500">here</span>
+      </Link>
+      &nbsp; to go to document 123
     </div>
   );
 };
