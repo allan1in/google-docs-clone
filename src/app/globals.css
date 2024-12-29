@@ -88,11 +88,20 @@ body {
 }
 
 .tiptap {
+  /* Link styles */
+  a {
+    @apply text-blue-600;
+    cursor: pointer;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+
   /* Image-specific styling */
   img {
     display: block;
     height: auto;
-    margin: 1.5rem 0;
     max-width: 100%;
 
     &.ProseMirror-selectednode {
@@ -169,31 +178,41 @@ body {
   h5,
   h6 {
     line-height: 1.1;
-    margin-top: 2.5rem;
+    margin: 1rem 0;
     text-wrap: pretty;
   }
 
   h1,
   h2 {
-    margin-top: 3.5rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     font-weight: 600;
   }
 
+  h3,
+  h4 {
+    margin: 1.25rem 0;
+  }
+
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
     font-size: 1.1rem;
   }
 
-  h4,
-  h5,
   h6 {
     font-size: 1rem;
   }
@@ -223,10 +242,6 @@ body {
   }
 
   /* Task list specific styles */
-  :first-child {
-    margin-top: 0;
-  }
-
   ul[data-type="taskList"] {
     list-style: none;
     margin-left: 0;
@@ -244,6 +259,10 @@ body {
 
       > div {
         flex: 1 1 auto;
+
+        > p:first-child {
+          margin-top: 0;
+        }
       }
     }
 
